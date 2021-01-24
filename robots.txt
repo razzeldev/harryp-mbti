@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://harryp-mbti.netlify.app/sitemap.xml

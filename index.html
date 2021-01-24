@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-42VCRZS13T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-42VCRZS13T');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="ALL">
+    <title>해리포터 기숙사 테스트</title>
+    <meta name="author" content="razzledev">
+    <link rel="canonical" href="https://harryp-mbti.netlify.app/">
+    <meta name="keywords" content="해리포터 기숙사 테스트,헤리포터 테스트,해리포터 기숙사 MBTI,mbti 테스트">
+    <meta http-equiv="progma" content="no-cache">
+    <meta name="description" content="나에게 맞는 해리포터 기숙사를 mbti 기반으로 추천해주는 테스트입니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="해리포터 기숙사 테스트">
+    <meta property="og:description" content="나에게 맞는 해리포터 기숙사를 mbti 기반으로 추천해주는 테스트입니다.">
+    <meta property="og:image" content="https://harryp-mbti.netlify.app/image/hogwarts.png">
+    <meta property="og:url" content="https://harryp-mbti.netlify.app/">
+    <link rel=" shortcut icon" href="image/favicon.ico">
+    <link rel="icon" href="image/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+    <article class="start">
+        <img src="image/main_logo.png" class="main_logo mt-5" alt="harryp_logo">
+        <img src="image/sub_logo.png" class="sub_logo mt-1" alt="your_perfect_dorm">
+        <button type="button" class="btn mt-5" onclick='start();'><img src="image/sorting_hat.PNG"
+                class="hat_pic"></button>
+        <div class="share addthis_inline_share_toolbox mt-5"></div>
+    </article>
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/20*1%)" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <img src="image/goldframe_tp.png" class="goldframe_tp mt-5" alt="top_goldframe">
+        <h2 id="title" class="text-center mt-2">question</h2>
+        <img src="image/goldframe_bt.png" class="goldframe_bt mt-2" alt="bottom_goldframe">
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn-answer btn btn-primary mt-5">btn type A</button>
+        <div class="mid-rectangle"></div>
+        <button id="B" type="button" class="btn-answer btn btn-primary mb-5">btn type B</button>
+    </article>
+    <article class="result">
+        <img src="image/main_logo.png" class="main_logo_end mt-5" alt="harryp_logo">
+        <img id="img" class="mt-4" src="image/slyth_logo.png" alt="dorm">
+        <img src="image/dorm_txt.png" id="dorm" class="mt-5" alt="dorm_name_tag">
+        <div class="exp_container mt-5">
+            <h2 id="p_type" class="text-center mt-3">p_type</h2>
+            <div class="container-explain">
+                <h3 id="explain" class="text-center mt-4 mb-3">explain</h3>
+            </div>
+
+            <div class="container-dorm_explain">
+                <h3 id="dorm_explain" class="text-justify mt-4 mb-4">dorm_explain</h3>
+            </div>
+            <br>
+            <hr style="background-color: white; width: 60%; height: 1px;" class="d-flex justify-content-center"><br>
+            <h2 id="best_fit_character" class="best_fit_character text-center mt-3 mb-3"
+                style="color: white; font-size: 1em;">* 성격이 가장 잘 맞는 영화 속 캐릭터 *</h2>
+            <div class="container-character">
+                <h3 id="character" class="text-center mt-4 mb-4" style="color: white; font-size: 1em;">character</h3>
+                <img id="character_img" class="character_img mt-3 mb-5 d-flex justify-content-center"
+                    src="image/character/해리포터.jpg" alt="잘어울리는캐릭터">
+            </div>
+        </div>
+        <button type="button" class="btn btn-light mt-5 reload_btn" onClick="window.location.reload()">다시 하기</button>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="share addthis_inline_share_toolbox mt-5"></div>
+    </article>
+    <article class="copyright mt-5">
+        <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link text-center mt-3 mb-3"
+            style="color: white; font-size: 1em;">제작 도움: 조코딩 유튜브 채널</a>
+        <span class="mt-2 text-center copyright-text">Copyright 2021 RAZZLEDEV all rights reserved</span>
+        <span class="mt-2 text-center copyright-text">contact us at razzledev0@gmail.com</span>
+    </article>
+    <article class="update-version" style="padding-top: 120px;">
+        <span class="mt-3 text-center version-last">최근 업데이트 : 2021.01.23 / 버전(최신) : 1.1.2</span>
+        <span class="mt-3 text-center update-last">성격이 ~ 기능 추가 및 배열 재배치 (ver 1.1.2)</span>
+        <div class="update-log text-center mt-3">
+            <pre class="update-last">
+<div class="updaete-log"> 업데이트 로그</div> 
+- 2021.01.11 ) 최초 디플로이 (ver 1.0.0)
+- 2021.01.12 ) 질문 수정 및 유형 결과 수정 (ver 1.0.1)
+- 2021.01.13 ) 이미지 최적화 및 오류 수정 (ver 1.0.2)
+- 2021.01.16 ) 질문 개수 증가 및 속도 최적화 작업 (ver 1.1.0)
+- 2021.01.22 ) 코드라이언 / 사진 최적화 (ver 1.1.1)
+- 2021.01.23 ) 성격이 가장 잘 맞는 인물 기능 추가 및 배열 재배치 (ver 1.1.2)
+            </pre>
+        </div>
+    </article>
+    <a href="#" style="display: none;">해리포터 기숙사 테스트</a>
+    <a href="#" style="display: none;">당신은 어떤 기숙사가 적합할지 테스트 해보세요!</a>
+    <a class="mt-5 codelion-banner d-flex justify-content-center"
+        href="https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=razzledev0">
+        <img src="image/ad.png" alt="banner-ad">
+    </a>
+
+    <article class="kakao_ad" style="padding-top: 10px;">
+        <ins class="kakao_ad_area mt-2" style="display:none;" data-ad-unit="DAN-KCgjSeZt5KkIPtEg" data-ad-width="320"
+            data-ad-height="50"></ins>
+        <ins class="kakao_ad_area" style="display:none;padding-top: 20px;" data-ad-unit="DAN-eMQb02wzkZxrGWHc"
+            data-ad-width="320" data-ad-height="50"></ins>
+        <ins class="kakao_ad_area" style="display:none;padding-top: 40px;" data-ad-unit="DAN-rtFPQ0Mstd4IfmFC"
+            data-ad-width="250" data-ad-height="250"></ins>
+    </article>
+    <div class="bt_rect mt-5"></div>
+    <script data-ad-client="ca-pub-1939990686436657" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        });
+    </script>
+    <script>
+        var num = 1;
+        var q = {
+            1: { "title": "당신이 다이애건 엘리에 왔다. 어느 가게를 먼저 들어가겠는가?", "type": "EI", "A": "위즐리 형제의 위대하고 위험한 장난감 가게", "B": "올리밴더의 마법 지팡이 가게" },
+            2: { "title": "당신의 크리스마스 파티에 초대 받았다. 둘중 어떤 옷을 입고 가겠는가?", "type": "EI", "A": "화려한  색의 연회복", "B": "깔끔한 검정색 정장" },
+            3: { "title": "호그와트에 어떤 애완동물을 데려가고 싶은가?", "type": "EI", "A": "검은 고양이", "B": "흰 올뻬미" },
+            4: { "title": "아침에 일어났더니 기숙사 문이 잠겨있다. 어떻게 나가겠는가?", "type": "EI", "A": "엑스펄소 (물체를 폭파시키는 마법)", "B": "알로호모라(자물쇠나 문 여는 마법)" },
+            5: { "title": "당신이 가장 배워보고 싶은 마법은?", "type": "EI", "A": "크루시아투스 (고통 저주 마법)", "B": "익스펠리아르무스 (무장 해제 마법)" },
+            6: { "title": "당신은 호그와트행 열차를 놓쳤다. 어떻게 할 것 인가?", "type": "SN", "A": "하늘을 나는 자동차를 타고 날아간다.", "B": "늦더라도 머글들이 볼까봐 다른 방법을 찾아본다." },
+            7: { "title": "당신이 퀴디치 시합을 하는 중에 골든 스니치가 눈 앞에서 날아가고 있다. 어떻게 하겠는가?", "type": "SN", "A": "늦게 잡더라도 계속 따라간다.", "B": "위험 하더라도 한번에 잡기 위해 점프한다" },
+            8: { "title": "당신은 호그와트에서 어느 수업을  듣고 싶은가?", "type": "SN", "A": "마법 방어술 수업", "B": "주술 수업" },
+            9: { "title": "마법약 수업 시간에 약을 만들고 있다. 당신은 어느 쪽인가?", "type": "SN", "A": "레시피대로 정확히 계산한다", "B": "재료만 맞춰서 대략적으로 넣는다" },
+            10: { "title": "당신이 특별한 능력을 가질 수 있다면, 어떤 능력을 갖고 싶은가?", "type": "SN", "A": "마음을 읽는 능력", "B": "과거를 바꿀 수 있는 능력" },
+            11: { "title": "당신은 트라이위저드 컵에 참가하여 미로 속에서 트로피를 찾았다. 하지만 친구가 뒤에서 나무에 엉켜 도와달라고 외친다. 어떻게 할 것인가?", "type": "TF", "A": "트로피가 사라지기 전에 트로피를 먼저 가져온 뒤 친구를 돕는다.", "B": "친구가 위험해 보여 친구를 먼저 돕는다." },
+            12: { "title": "금서 구역에 들어가고 싶은 욕망이 불타오르고 있다. 어떻게 하겠는가?", "type": "TF", "A": "친구가 걸리면 안되니 혼자 간다.", "B": "무서우니 친구와 함께 간다." },
+            13: { "title": "당신의 앞에 두권의 책이 펼쳐져 있다. 어느 책을 먼저 피겠는가?", "type": "TF", "A": "<호그와트 성의 비밀>", "B": "<그의 추종자들>" },
+            14: { "title": "당신은 마법사 표준 시험 OWL에 응시하는 중에 모르는 문제에 직면했다.", "type": "TF", "A": "논리적으로 나온 정답을 분석한다", "B": "오직 감에만 의존하여 문제를 찍는다" },
+            15: { "title": "어떤 사람이 더 잘못했는가?", "type": "TF", "A": "가족을 지키기 위해 절대적으로 금지된 마법을 사용해 상대를 죽인 마법사", "B": "무장해제 마법을 쓰다가 상대를 절벽에서 떨어뜨여 죽인 마법사" },
+            16: { "title": "스네이프 교수의 과제의 제출기한이 내일이다. 하지만 과제를 아직 끝내지 못했다. 어떻게 할 것인가?", "type": "JP", "A": "밤을 새서라도 한다.", "B": "스네이프 교수에게 기한을 연장시켜 달라고 부탁한다." },
+            17: { "title": "당신은 내일까지 20개의 마법주문을 외워야 한다. 어떻게 할 것인가?", "type": "JP", "A": "정해진 시간동안만 집중해서 외운다", "B": "종이에 적어 들고 다니며 계속 외운다" },
+            18: { "title": "당신은 호그와트 도서관의 금지된 구역에 가려 한다. 어떻게 할 것인가?", "type": "JP", "A": "미리 구조를 파악하여 어떤 일이 있더라고 정한 동선 대로 이동한다.", "B": "상황에 따라 계획을 바꾸며 대처한다" },
+            19: { "title": "아침에 일어나서 매일 하고 싶은 활동은?", "type": "EI", "A": "아침 산책하기", "B": "신문 읽기" },
+            20: { "title": "말포이가 당신에게 마시라며 주스를 주었다. 어떻게 할것인가?", "type": "JP", "A": "선생님께 성분 분석을 요청한다.", "B": "걱정없이 마신다." },
+        }
+        var result = {
+            "ISFP": { "dorm": "그리핀도르", "p_type": "당신은 발명가형 이군요", "explain": "풍부한 상상력을 가지고 새로운 것에 도전하는 사람으로 그리핀도르에 적합하다고 볼 수 있습니다.", "img": "image/gryff_logo.png", "dorm_explain": "<br>그리핀도르는 용감하고 대담한 자들을 위한 기숙사입니다. 불사조 기사단과, 오러들 중 다수가 그리핀도르 출신입니다. 호그와트의 교장인 덤블도어, 해리포터의 부모님 모두 그리핀도르 출신입니다. 게다가 볼드모트가 호그와트에 침공했을 당시 호그와트 그리고 영광을 위해서 가장 많은 학생이 남아 전투를 벌인 기숙사가 그리핀도르이기도 하죠. 기숙사의 대표 색상인 빨간색은 그리핀도르의 정열과 용기를 상징하기도 합니다.<br>", "character": "해리포터", "character_img": "image/character/해리포터.jpg", "img_logo": "image/name_gryff.png" },
+            "ESFJ": { "dorm": "그리핀도르", "p_type": "당신은 스파크형 이군요", "explain": "열정적으로 새로운 관계를 만드는 사람으로 그리핀도르에 적합하다고 볼 수 있습니다.", "img": "image/gryff_logo.png", "dorm_explain": "<br>그리핀도르는 용감하고 대담한 자들을 위한 기숙사입니다. 불사조 기사단과, 오러들 중 다수가 그리핀도르 출신입니다. 호그와트의 교장인 덤블도어, 해리포터의 부모님 모두 그리핀도르 출신입니다. 게다가 볼드모트가 호그와트에 침공했을 당시 호그와트 그리고 영광을 위해서 가장 많은 학생이 남아 전투를 벌인 기숙사가 그리핀도르이기도 하죠. 기숙사의 대표 색상인 빨간색은 그리핀도르의 정열과 용기를 상징하기도 합니다.<br>", "character": "몰리 위즐리", "character_img": "image/character/몰리_위즐리.jpg", "img_logo": "image/name_gryff.png" },
+            "ESFP": { "dorm": "그리핀도르", "p_type": "당신은 사교적인 유형 이군요", "explain": "분위기를 고조시키는 우호적 사람으로 그리핀도르에 적합하다고 볼 수 있습니다.", "img": "image/gryff_logo.png", "dorm_explain": "<br>그리핀도르는 용감하고 대담한 자들을 위한 기숙사입니다. 불사조 기사단과, 오러들 중 다수가 그리핀도르 출신입니다. 호그와트의 교장인 덤블도어, 해리포터의 부모님 모두 그리핀도르 출신입니다. 게다가 볼드모트가 호그와트에 침공했을 당시 호그와트 그리고 영광을 위해서 가장 많은 학생이 남아 전투를 벌인 기숙사가 그리핀도르이기도 하죠. 기숙사의 대표 색상인 빨간색은 그리핀도르의 정열과 용기를 상징하기도 합니다.<br>", "character": "론 위즐리", "character_img": "image/character/론_위즐리.jpg", "img_logo": "image/name_gryff.png" },
+            "ENTP": { "dorm": "그리핀도르", "p_type": "당신은 수완 좋은 활동가형 이군요", "explain": "친구,운동,음식등 다양한 활동을 선호하는 사람으로 그리핀도르에 적합하다고 볼 수 있습니다.", "img": "image/gryff_logo.png", "dorm_explain": "<br>그리핀도르는 용감하고 대담한 자들을 위한 기숙사입니다. 불사조 기사단과, 오러들 중 다수가 그리핀도르 출신입니다. 호그와트의 교장인 덤블도어, 해리포터의 부모님 모두 그리핀도르 출신입니다. 게다가 볼드모트가 호그와트에 침공했을 당시 호그와트 그리고 영광을 위해서 가장 많은 학생이 남아 전투를 벌인 기숙사가 그리핀도르이기도 하죠. 기숙사의 대표 색상인 빨간색은 그리핀도르의 정열과 용기를 상징하기도 합니다.<br>", "character": "시리우스 블랙", "character_img": "image/character/시리우스_블랙.jpg", "img_logo": "image/name_gryff.png" },
+            "ISTJ": { "dorm": "레번클로", "p_type": "당신은 아이디어 뱅크형 이군요", "explain": "비전적인 관점을 가지고 잇는 뛰어난 전략가으로 레번클로에 적합하다고 볼 수 있습니다.", "img": "image/raven_logo.png", "dorm_explain": "<br>레번클로는 현명하고 사려깊은 자들을 위한 기숙사입니다. 똑똑하고 지혜로운 학생이 많으며, 네 기숙사 중 가장 학업 성적이 우수한 기숙사로 묘사됩니다. 래번클로는 볼드모트가 침공했을 때 손익을 위해서 전투를 벌였다고 합니다. 주로 지혜로운 학자들이 많이 배출된 기숙사로 이 기숙사로 배정된 학생들은 대부분 원래부터 지적 호기심이 왕성하다고 합니다.<br>", "character": "스네이프", "character_img": "image/character/스네이프.jpg", "img_logo": "image/name_raven.png" },
+            "ESTJ": { "dorm": "레번클로", "p_type": "당신은 예언자형 이군요", "explain": "사람과 관련된 뛰어난 통찰력을 가지고 있는 사람으로 레번클로에 적합하다고 볼 수 있습니다.", "img": "image/raven_logo.png", "dorm_explain": "<br>레번클로는 현명하고 사려깊은 자들을 위한 기숙사입니다. 똑똑하고 지혜로운 학생이 많으며, 네 기숙사 중 가장 학업 성적이 우수한 기숙사로 묘사됩니다. 래번클로는 볼드모트가 침공했을 때 손익을 위해서 전투를 벌였다고 합니다. 주로 지혜로운 학자들이 많이 배출된 기숙사로 이 기숙사로 배정된 학생들은 대부분 원래부터 지적 호기심이 왕성하다고 합니다.<br>", "character": "맥고나걸", "character_img": "image/character/맥고나걸.jpg", "img_logo": "image/name_raven.png" },
+            "ISFJ": { "dorm": "레번클로", "p_type": "당신은 과학자형 이군요", "explain": "전체적인 부분을 조합하여 비전을 제시하는 사람으로 레번클로에 적합하다고 볼 수 있습니다.", "img": "image/raven_logo.png", "dorm_explain": "<br>레번클로는 현명하고 사려깊은 자들을 위한 기숙사입니다. 똑똑하고 지혜로운 학생이 많으며, 네 기숙사 중 가장 학업 성적이 우수한 기숙사로 묘사됩니다. 래번클로는 볼드모트가 침공했을 때 손익을 위해서 전투를 벌였다고 합니다. 주로 지혜로운 학자들이 많이 배출된 기숙사로 이 기숙사로 배정된 학생들은 대부분 원래부터 지적 호기심이 왕성하다고 합니다.<br>", "character": "네빌 롱바텀", "character_img": "image/character/네빌_롱바텀.jpg", "img_logo": "image/name_raven.png" },
+            "INTP": { "dorm": "레번클로", "p_type": "당신은 백과사전형 이군요", "explain": "논리적이고 뛰어난 상황 적응력을 가지고 있는 사람으로 레번클로에 적합하다고 볼 수 있습니다.", "img": "image/raven_logo.png", "dorm_explain": "<br>레번클로는 현명하고 사려깊은 자들을 위한 기숙사입니다. 똑똑하고 지혜로운 학생이 많으며, 네 기숙사 중 가장 학업 성적이 우수한 기숙사로 묘사됩니다. 래번클로는 볼드모트가 침공했을 때 손익을 위해서 전투를 벌였다고 합니다. 주로 지혜로운 학자들이 많이 배출된 기숙사로 이 기숙사로 배정된 학생들은 대부분 원래부터 지적 호기심이 왕성하다고 합니다.<br>", "character": "아서 위즐리", "character_img": "image/character/아서_위즐리.jpg", "img_logo": "image/name_raven.png" },
+            "INFJ": { "dorm": "후플푸프", "p_type": "당신은 잔 다르크형 이군요", "explain": "이상적인 세상을 만들어가는 사람으로 후플푸프에 적합하다고 볼 수 있습니다.", "img": "image/huff_logo.png", "dorm_explain": "<br>후플푸프는 정의롭고 진실한 자들을 위한 기숙사입니다. 조건이 있는 다른 기숙사와 다르게 특정한 조건 없이 다양한 아이들을 거두는 기숙사이기 때문에 멍청하다는 오해를 받기도 하지만 후플푸프의 특징은 선량함과 옳음입니다.  볼드모트의 침공때도 단지 옳은 것이라는 이유로 그리핀도르 다음으로 많은 학생이 남았고, 어둠의 마법사도 가장 적게 배출한 기숙사입니다. 선함 그 자체인 기숙사라고 봐도 무방할 듯합니다.<br>", "character": "덤블도어", "character_img": "image/character/덤블도어.jpg", "img_logo": "image/name_huff.png" },
+            "ENFP": { "dorm": "후플푸프", "p_type": "당신은 성인 군자형 이군요", "explain": "따뜻한 감정을 가지고 있는 겸손한 사람으로 후플푸프에 적합하다고 볼 수 있습니다.", "img": "image/huff_logo.png", "dorm_explain": "<br>후플푸프는 정의롭고 진실한 자들을 위한 기숙사입니다. 조건이 있는 다른 기숙사와 다르게 특정한 조건 없이 다양한 아이들을 거두는 기숙사이기 때문에 멍청하다는 오해를 받기도 하지만 후플푸프의 특징은 선량함과 옳음입니다.  볼드모트의 침공때도 단지 옳은 것이라는 이유로 그리핀도르 다음으로 많은 학생이 남았고, 어둠의 마법사도 가장 적게 배출한 기숙사입니다. 선함 그 자체인 기숙사라고 봐도 무방할 듯합니다.<br>", "character": "님파도라 통스", "character_img": "image/character/님파도라_통스.jpg", "img_logo": "image/name_huff.png" },
+            "INFP": { "dorm": "후플푸프", "p_type": "당신은 언변 능숙형 이군요", "explain": "타인의 성장을 도모하고 협동하는 사람으로 후플푸프에 적합하다고 볼 수 있습니다.", "img": "image/huff_logo.png", "dorm_explain": "<br>후플푸프는 정의롭고 진실한 자들을 위한 기숙사입니다. 조건이 있는 다른 기숙사와 다르게 특정한 조건 없이 다양한 아이들을 거두는 기숙사이기 때문에 멍청하다는 오해를 받기도 하지만 후플푸프의 특징은 선량함과 옳음입니다.  볼드모트의 침공때도 단지 옳은 것이라는 이유로 그리핀도르 다음으로 많은 학생이 남았고, 어둠의 마법사도 가장 적게 배출한 기숙사입니다. 선함 그 자체인 기숙사라고 봐도 무방할 듯합니다.<br>", "character": "루나 러브굿", "character_img": "image/character/루나_러브굿.jpg", "img_logo": "image/name_huff.png" },
+            "ISTP": { "dorm": "후플푸프", "p_type": "당신은 친선 도모형 이군요", "explain": "친절과 현실감을 바탕으로 타인에게 봉사하는 사람으로 후플푸프에 적합하다고 볼 수 있습니다.", "img": "image/huff_logo.png", "dorm_explain": "<br>후플푸프는 정의롭고 진실한 자들을 위한 기숙사입니다. 조건이 있는 다른 기숙사와 다르게 특정한 조건 없이 다양한 아이들을 거두는 기숙사이기 때문에 멍청하다는 오해를 받기도 하지만 후플푸프의 특징은 선량함과 옳음입니다.  볼드모트의 침공때도 단지 옳은 것이라는 이유로 그리핀도르 다음으로 많은 학생이 남았고, 어둠의 마법사도 가장 적게 배출한 기숙사입니다. 선함 그 자체인 기숙사라고 봐도 무방할 듯합니다.<br>", "character": "빅터 크롬", "character_img": "image/character/빅터_크롬.jpg", "img_logo": "image/name_huff.png" },
+            "INTJ": { "dorm": "슬리데린", "p_type": "당신은 지도자형 이군요", "explain": "비전을 가지고 사람들을 활력적으로 이끌어가는 사람으로 슬리데린에 적합하다고 볼 수 있습니다.", "img": "image/slyth_logo.png", "dorm_explain": "<br>슬리데린은 야망있는 재간꾼들을 위한 기숙사입니다. 어둠의 마법사가 가장 많이 배출되었고, 순수혈통이 가장 많은 기숙사입니다. 하지만 슬리데린에 배정되었다고 해서 무조건 나쁜 성격을 가진 것은 아닙니다. 볼드모트가 호그와트를 침공했을 때 오직 양심만을 위해 가장 적은 수가 남아 전투를 벌였고 타 기숙사와 자주 갈등을 빚는 기숙사입니다.<br>", "character": "볼드모트", "character_img": "image/character/볼드모트.jpg", "img_logo": "image/name_slyth.png" },
+            "ESTP": { "dorm": "슬리데린", "p_type": "당신은 사업가형 이군요", "explain": "사무적,실용적 현실적으로 일을 많이 하는 사람으로 슬리데린에 적합하다고 볼 수 있습니다.", "img": "image/slyth_logo.png", "dorm_explain": "<br>슬리데린은 야망있는 재간꾼들을 위한 기숙사입니다. 어둠의 마법사가 가장 많이 배출되었고, 순수혈통이 가장 많은 기숙사입니다. 하지만 슬리데린에 배정되었다고 해서 무조건 나쁜 성격을 가진 것은 아닙니다. 볼드모트가 호그와트를 침공했을 때 오직 양심만을 위해 가장 적은 수가 남아 전투를 벌였고 타 기숙사와 자주 갈등을 빚는 기숙사입니다.<br>", "character": "제임스 포터", "character_img": "image/character/제임스_포터.jpg", "img_logo": "image/name_slyth.png" },
+            "ENTJ": { "dorm": "슬리데린", "p_type": "당신은 세상의 소금형 이군요", "explain": "한번 시작한 일은 끝까지 해내는 사람으로 슬리데린에 적합하다고 볼 수 있습니다.", "img": "image/slyth_logo.png", "dorm_explain": "<br>슬리데린은 야망있는 재간꾼들을 위한 기숙사입니다. 어둠의 마법사가 가장 많이 배출되었고, 순수혈통이 가장 많은 기숙사입니다. 하지만 슬리데린에 배정되었다고 해서 무조건 나쁜 성격을 가진 것은 아닙니다. 볼드모트가 호그와트를 침공했을 때 오직 양심만을 위해 가장 적은 수가 남아 전투를 벌였고 타 기숙사와 자주 갈등을 빚는 기숙사입니다.<br>", "character": "드레이코 말포이", "character_img": "image/character/드레이코_말포이.jpg", "img_logo": "image/name_slyth.png" },
+            "ENFJ": { "dorm": "슬리데린", "p_type": "당신은 임금 뒷편의 권력형 이군요", "explain": "성실하고 온화하며 협조를 잘 하는 사람으로 슬리데린에 적합하다고 볼 수 있습니다.", "img": "image/slyth_logo.png", "dorm_explain": "<br>슬리데린은 야망있는 재간꾼들을 위한 기숙사입니다. 어둠의 마법사가 가장 많이 배출되었고, 순수혈통이 가장 많은 기숙사입니다. 하지만 슬리데린에 배정되었다고 해서 무조건 나쁜 성격을 가진 것은 아닙니다. 볼드모트가 호그와트를 침공했을 때 오직 양심만을 위해 가장 적은 수가 남아 전투를 벌였고 타 기숙사와 자주 갈등을 빚는 기숙사입니다.<br>", "character": "헤르미온느 그레인저", "character_img": "image/character/헤르미온느_그레인저.jpg", "img_logo": "image/name_slyth.png" },
+        }
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        $("#A").click(function () {
+            var type = $("#type").val();
+            var preValue = $("#" + type).val();
+            $("#" + type).val(parseInt(preValue) + 1);
+            next();
+        });
+        $("#B").click(function () {
+            next();
+        });
+        function next() {
+            if (num == 21) {
+                $(".question").hide();
+                $(".result").show();
+                var mbti = "";
+                // if else 구문입니다
+                ($("#EI").val() < 3) ? mbti += "I" : mbti += "E";
+                ($("#SN").val() < 3) ? mbti += "N" : mbti += "S";
+                ($("#TF").val() < 3) ? mbti += "F" : mbti += "T";
+                ($("#JP").val() < 3) ? mbti += "P" : mbti += "J";
+                // alert(mbti);
+                $("#img").attr('src', result[mbti]["img"]);
+                $("#dorm").html(result[mbti]["dorm"]);
+                $("#p_type").html(result[mbti]["p_type"]);
+                $("#explain").html(result[mbti]["explain"]);
+                $("#dorm_explain").html(result[mbti]["dorm_explain"]);
+                $("#character").html(result[mbti]["character"]);
+                $('#character_img').attr('src', result[mbti]["character_img"]);
+                $('#dorm').attr('src', result[mbti]["img_logo"]);
+
+                addthis.update('share', 'url', "https://harryp-mbti.netlify.app/");
+                addthis.update('share', 'title', "#해리포터_기숙사_테스트 | 당신은 "+result[mbti]["dorm"]+"입니다!");
+                addthis.update('share', 'image', "https://harryp-mbti.netlify.app/image/hogwarts.png");
+            } else {
+                $(".progress-bar").attr('style', 'width: calc(100/20*' + num + '%)')
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ff885c80c20eccf"></script>
+</body>
+
+</html>
