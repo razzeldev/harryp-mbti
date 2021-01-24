@@ -217,10 +217,24 @@
                 $("#character").html(result[mbti]["character"]);
                 $('#character_img').attr('src', result[mbti]["character_img"]);
                 $('#dorm').attr('src', result[mbti]["img_logo"]);
-
+                var emoji_dorm;
+                switch (result[mbti]["dorm"]) {
+                    case "그리핀도르":
+                        emoji_dorm = "🦁";
+                        break;
+                    case "레번클로":
+                        emoji_dorm = "🦅";
+                        break;
+                    case "후플푸프":
+                        emoji_dorm = "🦡";
+                        break;
+                    case "슬리데린":
+                        emoji_dorm = "🐍";
+                        break;
+                }
                 addthis.update('share', 'url', "https://harryp-mbti.netlify.app/");
-                addthis.update('share', 'title', "#해리포터_기숙사_테스트 | 당신은 "+result[mbti]["dorm"]+"입니다!");
-                addthis.update('share', 'image', "https://harryp-mbti.netlify.app/image/hogwarts.png");
+                addthis.update('share', 'title', "#해리포터_기숙사_테스트 | 당신은 "+result[mbti]["dorm"]+emoji_dorm+" 입니다!");
+                addthis.update('share', 'image', "https://harryp-mbti.netlify.app/image/sorting_hat.PNG");
             } else {
                 $(".progress-bar").attr('style', 'width: calc(100/20*' + num + '%)')
                 $("#title").html(q[num]["title"]);
