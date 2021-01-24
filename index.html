@@ -76,7 +76,7 @@
             <br>
             <hr style="background-color: white; width: 60%; height: 1px;" class="d-flex justify-content-center"><br>
             <h2 id="best_fit_character" class="best_fit_character text-center mt-3 mb-3"
-                style="color: white; font-size: 1em;">* 성격이 가장 잘 맞는 영화 속 캐릭터 *</h2>
+                style="color: white; font-size: 1em;">* 케미가 가장 잘 맞는 영화 속 캐릭터 *</h2>
             <div class="container-character">
                 <h3 id="character" class="text-center mt-4 mb-4" style="color: white; font-size: 1em;">character</h3>
                 <img id="character_img" class="character_img mt-3 mb-5 d-flex justify-content-center"
@@ -93,35 +93,24 @@
         <span class="mt-2 text-center copyright-text">Copyright 2021 RAZZLEDEV all rights reserved</span>
         <span class="mt-2 text-center copyright-text">contact us at razzledev0@gmail.com</span>
     </article>
-    <article class="update-version" style="padding-top: 120px;">
-        <span class="mt-3 text-center version-last">최근 업데이트 : 2021.01.23 / 버전(최신) : 1.1.2</span>
-        <span class="mt-3 text-center update-last">성격이 ~ 기능 추가 및 배열 재배치 (ver 1.1.2)</span>
-        <div class="update-log text-center mt-3">
-            <pre class="update-last">
-<div class="updaete-log"> 업데이트 로그</div> 
-- 2021.01.11 ) 최초 디플로이 (ver 1.0.0)
-- 2021.01.12 ) 질문 수정 및 유형 결과 수정 (ver 1.0.1)
-- 2021.01.13 ) 이미지 최적화 및 오류 수정 (ver 1.0.2)
-- 2021.01.16 ) 질문 개수 증가 및 속도 최적화 작업 (ver 1.1.0)
-- 2021.01.22 ) 코드라이언 / 사진 최적화 (ver 1.1.1)
-- 2021.01.23 ) 성격이 가장 잘 맞는 인물 기능 추가 및 배열 재배치 (ver 1.1.2)
-            </pre>
-        </div>
+    <article class="update-version" style="padding-top: 60px;">
+        <a href="/update-log/update-log.html"><button type="button"
+                class="btn btn-primary update-log-btn d-flex justify-content-center">업데이트 로그</button></a>
     </article>
     <a href="#" style="display: none;">해리포터 기숙사 테스트</a>
     <a href="#" style="display: none;">당신은 어떤 기숙사가 적합할지 테스트 해보세요!</a>
     <a class="mt-5 codelion-banner d-flex justify-content-center"
-        href="https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=razzledev0">
+        href="https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=razzledev0" style="padding-top:10px">
         <img src="image/ad.png" alt="banner-ad">
     </a>
 
     <article class="kakao_ad" style="padding-top: 10px;">
-        <ins class="kakao_ad_area mt-2" style="display:none;" data-ad-unit="DAN-KCgjSeZt5KkIPtEg" data-ad-width="320"
+        <ins class="kakao_ad_area" style="display:none; padding-top: 20px;" data-ad-unit="DAN-KCgjSeZt5KkIPtEg" data-ad-width="320"
             data-ad-height="50"></ins>
-        <ins class="kakao_ad_area" style="display:none;padding-top: 20px;" data-ad-unit="DAN-eMQb02wzkZxrGWHc"
+        <ins class="kakao_ad_area" style="display:none; padding-top: 40px;" data-ad-unit="DAN-kVua6E7mrLOP3iUY" data-ad-width="320"
+            data-ad-height="50"></ins>
+        <ins class="kakao_ad_area" style="display:none; padding-top: 60px;" data-ad-unit="DAN-eMQb02wzkZxrGWHc"
             data-ad-width="320" data-ad-height="50"></ins>
-        <ins class="kakao_ad_area" style="display:none;padding-top: 40px;" data-ad-unit="DAN-rtFPQ0Mstd4IfmFC"
-            data-ad-width="250" data-ad-height="250"></ins>
     </article>
     <div class="bt_rect mt-5"></div>
     <script data-ad-client="ca-pub-1939990686436657" async
@@ -233,7 +222,7 @@
                         break;
                 }
                 addthis.update('share', 'url', "https://harryp-mbti.netlify.app/");
-                addthis.update('share', 'title', "#해리포터_기숙사_테스트 | 당신은 "+result[mbti]["dorm"]+emoji_dorm+" 입니다!");
+                addthis.update('share', 'title', "#해리포터_기숙사_테스트 | 당신은 " + result[mbti]["dorm"] + emoji_dorm + " 입니다!");
                 addthis.update('share', 'image', "https://harryp-mbti.netlify.app/image/sorting_hat.PNG");
             } else {
                 $(".progress-bar").attr('style', 'width: calc(100/20*' + num + '%)')
