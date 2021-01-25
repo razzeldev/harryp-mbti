@@ -111,14 +111,14 @@ article {
     border-radius: 10px;
     width: 300px;
     margin: 0 auto;
-    border: 4px solid white;
+    /* border: 4px solid white; */
 }
 
 .exp_container {
     width: 100%;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 1 );
-    border: 3px solid white;
+    /* border: 3px solid white; */
     color: white;
     margin: 0 auto;
 }
