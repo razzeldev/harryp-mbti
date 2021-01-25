@@ -117,7 +117,7 @@ article {
 .exp_container {
     width: 100%;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 1 );
+    background-color: rgba(0, 0, 0, 0.7);
     /* border: 3px solid white; */
     color: white;
     margin: 0 auto;
