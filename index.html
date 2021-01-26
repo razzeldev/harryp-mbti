@@ -190,7 +190,6 @@
         function next() {
             if (num == 21) {
                 $(".question").hide();
-                $(".result").show();
                 var mbti = "";
                 // if else 구문입니다
                 ($("#EI").val() < 3) ? mbti += "I" : mbti += "E";
@@ -221,6 +220,7 @@
                         emoji_dorm = "🐍";
                         break;
                 }
+                $(".result").show();
                 addthis.update('share', 'url', "https://harryp-mbti.netlify.app/");
                 addthis.update('share', 'title', "#해리포터_기숙사_테스트 | 당신은 " + result[mbti]["dorm"] + emoji_dorm + " 입니다!");
                 addthis.update('share', 'image', "https://harryp-mbti.netlify.app/image/sorting_hat.PNG");
